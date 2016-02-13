@@ -1,13 +1,23 @@
-package net.delphin.deepnlp.annotations;
+package net.delphin.deepnlp.labels;
 
 
 import java.util.List;
 
-import net.delphin.deepnlp.obj.Datum;
-import net.delphin.deepnlp.obj.Word;
+import net.delphin.deepnlp.data.Datum;
+import net.delphin.deepnlp.data.Word;
 
 
-public interface HasWords extends Annotation {
+/**
+ * HasWords<br>
+ * <br>
+ * {@link Label} representing this {@link Datum} has a {@link List} of
+ * {@link Word} objects, usually for a {@link Sentence}
+ *
+ * @author trimblet
+ * @since Feb 13, 2016
+ * @version 0.1
+ */
+public interface HasWords extends Label {
 
 	/**
 	 * @return the underlying {@link Word} objects of this {@link Datum}

@@ -1,10 +1,13 @@
-package net.delphin.deepnlp.obj;
+package net.delphin.deepnlp.data;
 
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+
+import net.delphin.deepnlp.obj.TypesafeMap;
+import net.delphin.deepnlp.obj.TypesafeMap.Key;
 
 
 public class Datum implements TypesafeMap {

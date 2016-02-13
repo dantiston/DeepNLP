@@ -11,8 +11,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import net.delphin.deepnlp.annotators.Annotator;
-import net.delphin.deepnlp.data.Document;
+import net.delphin.deepnlp.annotations.Annotation;
 
 import org.junit.Test;
 
@@ -21,45 +20,16 @@ public abstract class TypesafeMapTest {
 
 	abstract TypesafeMap newInstance();
 
-	private final static class TestAnnotation implements Annotator {
-
-		private static int counter = 0;
-		private final int id;
-
-
-		@Override
-		public void annotate(Document document) {}
-
-
-		TestAnnotation() {
-			this.id = counter++;
-		}
-
-
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj) {
-				return true;
-			}
-			if (obj == null) {
-				return false;
-			}
-			if (this.getClass() != obj.getClass()) {
-				return false;
-			}
-			TestAnnotation other = (TestAnnotation) obj;
-			if (this.id != other.id) {
-				return false;
-			}
-			return true;
-		}
-
-
-		@Override
-		public String toString() {
-			return String.valueOf(this.id);
-		}
-	}
+	/**
+	 * TestAnnotation<br>
+	 * <br>
+	 * Trivial {@link Annotation} for testing
+	 *
+	 * @author trimblet
+	 * @since Feb 13, 2016
+	 * @version 0.1
+	 */
+	private final static class TestAnnotation implements Annotation {}
 
 
 	@Test

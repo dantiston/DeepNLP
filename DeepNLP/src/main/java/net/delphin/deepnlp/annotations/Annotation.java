@@ -1,14 +1,9 @@
 package net.delphin.deepnlp.annotations;
 
 
-import net.delphin.deepnlp.obj.Datum;
+import net.delphin.deepnlp.obj.TypesafeMap;
 
 
-public interface Annotation {
-
-	/**
-	 * @return the {@link Datum} object this {@link Annotation} annotates
-	 */
-	public abstract Datum getDatum();
+public interface Annotation extends TypesafeMap.Key {
 
 }

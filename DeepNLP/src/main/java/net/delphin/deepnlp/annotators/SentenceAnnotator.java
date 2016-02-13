@@ -1,14 +1,15 @@
 package net.delphin.deepnlp.annotators;
 
 
-import java.util.List;
-
-import net.delphin.deepnlp.data.Document;
-import net.delphin.deepnlp.obj.Sentence;
+import net.delphin.deepnlp.annotations.Annotation;
+import net.delphin.deepnlp.annotations.SentenceAnnotation;
 
 
-public interface SentenceAnnotator extends Annotator {
+public abstract class SentenceAnnotator extends Annotator {
 
-	public abstract List<Sentence> process(Document document);
+	@Override
+	public final Class<? extends Annotation> getAnnotationClass() {
+		return SentenceAnnotation.class;
+	}
 
 }
