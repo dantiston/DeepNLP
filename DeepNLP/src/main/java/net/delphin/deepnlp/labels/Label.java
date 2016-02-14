@@ -1,14 +1,16 @@
 package net.delphin.deepnlp.labels;
 
 
-import net.delphin.deepnlp.data.Datum;
+import net.delphin.deepnlp.obj.Datum;
 
 
-public interface Label {
-
-	/**
-	 * @return the {@link Datum} object this {@link Label} annotates
-	 */
-	public abstract Datum getDatum();
-
-}
+/**
+ * Label<br>
+ * <br>
+ * Marker interface for {@link Datum} objects
+ *
+ * @author trimblet
+ * @since Feb 13, 2016
+ * @version 0.1
+ */
+public interface Label {}

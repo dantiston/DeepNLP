@@ -1,4 +1,4 @@
-package net.delphin.deepnlp.data;
+package net.delphin.deepnlp.obj;
 
 
 import java.util.HashMap;
@@ -6,10 +6,18 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-import net.delphin.deepnlp.obj.TypesafeMap;
-import net.delphin.deepnlp.obj.TypesafeMap.Key;
+import net.delphin.deepnlp.data.TypesafeMap;
 
 
+/**
+ * Datum<br>
+ * <br>
+ * {@link TypesafeMap} implementation
+ *
+ * @author trimblet
+ * @since Feb 13, 2016
+ * @version 0.1
+ */
 public class Datum implements TypesafeMap {
 
 	private static final Integer INITIAL_CAPACITY = 4;

@@ -1,6 +1,6 @@
 package net.delphin.deepnlp.obj;
 
-import net.delphin.deepnlp.data.Datum;
+import net.delphin.deepnlp.data.TypesafeMap;
 
 
 public class DatumTest extends TypesafeMapTest {

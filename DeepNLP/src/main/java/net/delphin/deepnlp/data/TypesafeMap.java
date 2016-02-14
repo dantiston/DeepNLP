@@ -1,7 +1,6 @@
-package net.delphin.deepnlp.obj;
+package net.delphin.deepnlp.data;
 
 
-import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -85,94 +84,4 @@ public interface TypesafeMap {
 	 * @return true if and only if size == 0
 	 */
 	public boolean isEmpty();
-
-	/** Singleton instance of an empty TypesafeMap */
-	static final TypesafeMap EMPTY_TYPESAFE_MAP = new EmptyTypesafeMap();
-
-
-	public default TypesafeMap emptyTypesafeMap() {
-		return EMPTY_TYPESAFE_MAP;
-	}
-
-	/**
-	 * EmptyTypesafeMap<br>
-	 * <br>
-	 * Implementation of {@link TypesafeMap} with no elements
-	 *
-	 * @author trimblet
-	 * @since Feb 13, 2016
-	 * @version 0.1
-	 */
-	public static class EmptyTypesafeMap implements TypesafeMap {
-
-		@Override
-		public Optional<? extends Key> get(Class<? extends Key> key) {
-			return Optional.empty();
-		}
-
-
-		/**
-		 * @see net.delphin.deepnlp.obj.TypesafeMap#put(java.lang.Class,
-		 *      net.delphin.deepnlp.obj.TypesafeMap.Key)
-		 * @see java.util.Collections#emptyList()
-		 * @see java.util.Collections#emptySet()
-		 */
-		@Override
-		public void put(Class<? extends Key> key, Key value) {
-			throw new UnsupportedOperationException();
-		}
-
-
-		@Override
-		public Optional<? extends Key> remove(Class<? extends Key> key) {
-			return Optional.empty();
-		}
-
-
-		@Override
-		public boolean containsKey(Class<? extends Key> key) {
-			return false;
-		}
-
-
-		@Override
-		public int size() {
-			return 0;
-		}
-
-
-		@Override
-		public Set<Class<? extends Key>> keySet() {
-			return Collections.emptySet();
-		}
-
-
-		@Override
-		public boolean isEmpty() {
-			return true;
-		}
-
-
-		@Override
-		public int hashCode() {
-			return 31; // prime
-		}
-
-
-		@Override
-		public boolean equals(Object other) {
-			if (other == null) {
-				return false;
-			}
-			if (!(other instanceof TypesafeMap)) {
-				return false;
-			}
-			TypesafeMap otherMap = (TypesafeMap) other;
-			if (this.size() != otherMap.size()) {
-				return false;
-			}
-			return true;
-		}
-
-	}
 }

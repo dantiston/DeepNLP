@@ -1,7 +1,7 @@
 package net.delphin.deepnlp.labels;
 
 
-import net.delphin.deepnlp.data.Datum;
+import net.delphin.deepnlp.obj.Datum;
 
 
 /**

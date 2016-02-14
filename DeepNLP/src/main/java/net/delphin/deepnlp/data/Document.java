@@ -1,40 +1,27 @@
 package net.delphin.deepnlp.data;
 
 
-import net.delphin.deepnlp.obj.TypesafeMap;
+import net.delphin.deepnlp.labels.HasSentences;
 
 
+/**
+ * Document<br>
+ * <br>
+ * {@link TypesafeMap} abstract implementation implementing the
+ * {@link HasSentences} interface
+ *
+ * @author trimblet
+ * @since Feb 13, 2016
+ * @version 0.1
+ */
 public interface Document extends TypesafeMap {
 
-	final Document EMPTY_DOCUMENT = new EmptyDocument();
-
-	static final class EmptyDocument extends EmptyTypesafeMap implements Document {
-
-		@Override
-		public int getId() {
-			return -1;
-		}
-	}
+	public abstract String getBody();
 
 
-	/**
-	 * @return an empty {@link Document} object
-	 */
-	public default Document emptyDocument() {
-		return EMPTY_DOCUMENT;
-	}
+	public abstract String getTitle();
 
 
-	public default String getBody() {
-		return "";
-	}
-
-
-	public default String getTitle() {
-		return "";
-	}
-
-
-	public int getId();
+	public abstract int getId();
 
 }

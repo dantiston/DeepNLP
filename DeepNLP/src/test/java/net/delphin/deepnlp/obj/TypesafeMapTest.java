@@ -12,6 +12,7 @@ import java.util.Optional;
 import java.util.Set;
 
 import net.delphin.deepnlp.annotations.Annotation;
+import net.delphin.deepnlp.data.TypesafeMap;
 
 import org.junit.Test;
 
